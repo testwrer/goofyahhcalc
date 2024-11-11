@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proxy Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div id="calculator">
+      <h1>Proxy Calculator</h1>
+      <input type="text" id="code" placeholder="Enter Code" oninput="checkCode()">
+      <input type="text" id="url" placeholder="Enter URL" style="display:none;" oninput="proxySite()">
+      <button id="goBtn" style="display:none;" onclick="startProxy()">Go</button>
+    </div>
+    <div id="loading" style="display:none;">
+      <p>Loading...</p>
+      <div class="loader"></div>
+    </div>
+    <div id="proxyContainer" style="display:none;">
+      <iframe id="proxyFrame" width="100%" height="100%" style="border:none;"></iframe>
+    </div>
+  </div>
+
+  <script src="proxy.js"></script>
+</body>
+</html>
